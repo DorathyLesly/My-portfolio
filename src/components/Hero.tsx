@@ -72,12 +72,12 @@ const Hero = () => {
           </div>
           
           <div className="flex justify-center">
-            <div className="relative w-64 h-64">
+            <div className="relative w-80 h-80">
               <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
               <img
                 src={profileImg}
                 alt="Dorathy Lesly Sureshkumar - Software Engineer"
-                className="relative rounded-full w-64 h-64 object-cover border-4 border-primary/30 glow"
+                className="relative rounded-full w-80 h-80 object-cover border-4 border-primary/30 glow"
               />
             </div>
           </div>
