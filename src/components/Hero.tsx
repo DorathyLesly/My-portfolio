@@ -76,7 +76,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
               <img
                 src={profileImg}
-                alt="Dorathy Lesly Sureshkumar"
+                alt="Dorathy Lesly Sureshkumar - Software Engineer"
                 className="relative rounded-2xl w-full max-w-md glow"
               />
             </div>
