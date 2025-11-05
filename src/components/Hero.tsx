@@ -18,7 +18,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-background/90 backdrop-blur-sm" />
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="grid md:grid-cols-2 gap-12 items-start md:items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="space-y-2">
               <p className="text-primary font-medium">WELCOME TO MY WORLD</p>
@@ -71,7 +71,7 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="flex justify-center md:justify-start md:pt-0">
+          <div className="flex justify-center">
             <div className="relative w-64 h-64">
               <div className="absolute inset-0 bg-primary/20 blur-3xl rounded-full" />
               <img
