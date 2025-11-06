@@ -1,12 +1,19 @@
 import { useState } from "react";
-import { Mail, Phone, Send, Github, Linkedin } from "lucide-react";
+import { Mail, Phone, Send, Github, Linkedin, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from "@emailjs/browser";
+
+// EmailJS Configuration
+const EMAILJS_SERVICE_ID = "service_zndd2qf";
+const EMAILJS_TEMPLATE_ID = "template_82kiy69";
+const EMAILJS_PUBLIC_KEY = "ZzTtPUplauSiqncoG";
 
 const Contact = () => {
   const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -14,13 +21,38 @@ const Contact = () => {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-    setFormData({ name: "", email: "", phone: "", message: "" });
+    setIsLoading(true);
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          phone_number: formData.phone,
+          message: formData.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for reaching out. I'll get back to you soon!",
+      });
+      setFormData({ name: "", email: "", phone: "", message: "" });
+    } catch (error) {
+      console.error("Email send error:", error);
+      toast({
+        title: "Failed to Send",
+        description: "Something went wrong. Please try again or email me directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -144,9 +176,18 @@ const Contact = () => {
                 />
               </div>
               
-              <Button type="submit" size="lg" className="w-full glow-hover">
-                Send Message
-                <Send className="ml-2 h-4 w-4" />
+              <Button type="submit" size="lg" className="w-full glow-hover" disabled={isLoading}>
+                {isLoading ? (
+                  <>
+                    Sending...
+                    <Loader2 className="ml-2 h-4 w-4 animate-spin" />
+                  </>
+                ) : (
+                  <>
+                    Send Message
+                    <Send className="ml-2 h-4 w-4" />
+                  </>
+                )}
               </Button>
             </form>
           </div>
