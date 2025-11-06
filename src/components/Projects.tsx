@@ -14,7 +14,7 @@ const Projects = () => {
       title: "Medical Booking App",
       description: "Java desktop application for medical appointment booking with database integration and user management.",
       tech: ["Java", "NetBeans", "MySQL"],
-      github: "#",
+      github: "https://github.com/DorathyLesly/Medicare-plus-OOP.git",
     },
     {
       title: "Student Record Management System",
