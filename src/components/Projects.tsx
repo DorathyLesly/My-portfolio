@@ -26,7 +26,7 @@ const Projects = () => {
       title: "KIDDO - Kids Products eCommerce",
       description: "E-commerce platform specializing in children's products with secure payment processing.",
       tech: ["PHP", "MySQL", "Bootstrap", "JavaScript"],
-      github: "#",
+      github: "https://github.com/DorathyLesly/KIDDO.git",
     },
     {
       title: "Wan Lanka - Tourism Website",
