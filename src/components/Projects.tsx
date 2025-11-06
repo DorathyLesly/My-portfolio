@@ -20,7 +20,7 @@ const Projects = () => {
       title: "Student Record Management System",
       description: "Comprehensive platform for managing student records with real-time updates and data analytics.",
       tech: ["Java", "MongoDB", "AJAX"],
-      github: "#",
+      github: "https://github.com/DorathyLesly/Student-Management-System.git",
     },
     {
       title: "KIDDO - Kids Products eCommerce",
