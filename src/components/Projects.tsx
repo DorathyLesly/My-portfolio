@@ -7,8 +7,8 @@ const Projects = () => {
       title: "Deizel - Herbal Products eCommerce",
       description: "Full-stack e-commerce website for herbal products with shopping cart, payment integration, and admin dashboard.",
       tech: ["HTML", "CSS", "JavaScript", "PHP", "Bootstrap"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/DorathyLesly/Deizel.git",
+      live: "https://dorathylesly.github.io/Deizel/",
     },
     {
       title: "Medical Booking App",
