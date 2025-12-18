@@ -5,27 +5,32 @@ const Skills = () => {
     {
       title: "Programming Languages",
       icon: Code,
-      skills: ["C", "C++", "C#", "Java", "JavaScript", "PHP", "Dart"],
+      skills: ["C", "C++", "C#", "Java", "JavaScript", "PHP", "python","Typescript"] ,
     },
     {
-      title: "Frameworks & Tools",
+      title: "Frameworks, Tools & Technologies",
       icon: Wrench,
-      skills: ["Bootstrap", "Flutter", "React", "Laravel", "Livewire", "Apache", "jQuery"],
+      skills: ["Bootstrap", "React", "Laravel", "Livewire", "Django", "jQuery", ".NET", "Javascript", "HTML","CSS"],
     },
     {
       title: "Databases",
       icon: Database,
-      skills: ["Firebase", "MongoDB", "MySQL", "Microsoft SQL Server"],
+      skills: ["MongoDB", "MySQL"],
     },
     {
       title: "Soft Skills",
       icon: Users,
       skills: ["Teamwork", "Adaptability", "Problem-solving", "Continuous Learning"],
     },
+    {
+      title: "Project management tools",
+      icon: Users,
+      skills: ["Jira", "Docker"],
+    },
   ];
 
   const tools = [
-    "Canva", "Figma", "Git", "GitHub", "GitLab", "Jira", "Android Studio"
+    "Canva", "Figma", "Git", "GitHub", "GitLab", "Jira", "Android Studio", "NetBeans", "Visual Studio Code", "Visual Studio"
   ];
 
   return (
