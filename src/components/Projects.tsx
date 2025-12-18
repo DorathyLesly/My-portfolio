@@ -6,7 +6,7 @@ const Projects = () => {
     {
       title: "ATS- WebApplication-2025",
       description:
-        "Full-stack e-commerce website for herbal products with shopping cart, payment integration, and admin dashboard.",
+        "A comprehensive Applicant Tracking System (ATS) web application for managing recruitment processes, including job postings, applicant tracking, and interview scheduling.",
       tech: ["React", "Typescript", "JavaScript", "python", "Django","SQLite"],
       github: "https://github.com/DorathyLesly/ATS",
       live: "https://talent-flow-ruby-one.vercel.app",
