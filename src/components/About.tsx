@@ -2,7 +2,7 @@ import { MapPin, GraduationCap } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="container mx-auto px-4">
+    <section id="about" className="container mx-auto px-4 -mt-20">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
           About <span className="text-gradient">Me</span>
@@ -35,17 +35,26 @@ const About = () => {
           </p>
           
           <div className="grid md:grid-cols-3 gap-6 pt-6">
-            <div className="text-center p-6 glass-panel glass-panel-hover">
-              <div className="text-3xl font-bold text-primary mb-2">3+</div>
-              <div className="text-sm text-muted-foreground">Years Experience</div>
+            <div className="achievement-card group">
+              <div className="achievement-content">
+                <div className="text-4xl font-bold text-blue-400 mb-3 group-hover:text-blue-300 transition-colors">1+</div>
+                <div className="text-sm text-blue-100/80">Years Experience</div>
+                <div className="achievement-glow"></div>
+              </div>
             </div>
-            <div className="text-center p-6 glass-panel glass-panel-hover">
-              <div className="text-3xl font-bold text-primary mb-2">10+</div>
-              <div className="text-sm text-muted-foreground">Projects Completed</div>
+            <div className="achievement-card group">
+              <div className="achievement-content">
+                <div className="text-4xl font-bold text-blue-400 mb-3 group-hover:text-blue-300 transition-colors">5+</div>
+                <div className="text-sm text-blue-100/80">Projects Completed</div>
+                <div className="achievement-glow"></div>
+              </div>
             </div>
-            <div className="text-center p-6 glass-panel glass-panel-hover">
-              <div className="text-3xl font-bold text-primary mb-2">8+</div>
-              <div className="text-sm text-muted-foreground">Certifications</div>
+            <div className="achievement-card group">
+              <div className="achievement-content">
+                <div className="text-4xl font-bold text-blue-400 mb-3 group-hover:text-blue-300 transition-colors">8+</div>
+                <div className="text-sm text-blue-100/80">Certifications</div>
+                <div className="achievement-glow"></div>
+              </div>
             </div>
           </div>
         </div>

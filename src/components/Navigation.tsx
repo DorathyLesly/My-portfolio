@@ -45,9 +45,18 @@ const Navigation = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map(link => <a key={link.href} href={link.href} className="text-sm font-medium text-foreground/80 hover:text-primary transition-colors">
-                {link.label}
-              </a>)}
+            {navLinks.map(link => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="group relative text-lg font-bold text-foreground/90 px-3 py-1 transition-colors duration-200 focus:outline-none"
+              >
+                <span className="relative z-10">{link.label}</span>
+                <span className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+                  <span className="transition-all duration-200 rounded-full bg-primary/20 scale-0 group-hover:scale-100 group-focus:scale-100" style={{width:'2.2em',height:'2.2em',display:'inline-block'}}></span>
+                </span>
+              </a>
+            ))}
           </div>
 
           {/* Mobile Menu Button */}
